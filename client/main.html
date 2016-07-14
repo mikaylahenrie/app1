@@ -1,0 +1,29 @@
+<head>
+  <title>app</title>
+</head>
+
+<body>
+  {{> CommentList}}
+</body>
+
+<template name="CommentList">
+  <h1>Flack</h1>
+
+  <ul>
+    {{#each comments}}
+      <li>
+        <div>
+          {{login}}
+        </div>
+        <div>
+          {{timestamp}}
+        </div>
+        <div>
+          {{comment}}
+        </div>
+      </li>
+    {{else}}
+      <li>Sorry, no comments yet!</li>
+    {{/each}}
+  </ul>
+</template>
